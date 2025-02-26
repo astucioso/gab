@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="59d">
+  <meta property="og:description" content="doxx gab by: vokal">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1329955506919571518/1337493256233156698/imagem2.png?ex=67a7a529&is=67a653a9&hm=bd528bde01bf4c526df8f2f0b39ccb34940cb501b00f7c237dbc599db142e747&">
+  <meta property="og:url" content="https://59d.io">
+  <meta property="og:type" content="website">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gabzzxw</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #121212;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            flex-direction: column;
+        }
+        .ficha {
+            background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+            padding: 30px;
+            border-radius: 15px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+            margin-bottom: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        .ficha h2 {
+            margin-bottom: 15px;
+            color: #ff00dd;
+        }
+        .ficha p {
+            font-size: 16px;
+            margin: 8px 0;
+        }
+        .seta {
+            font-size: 36px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            color: #ff009d;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .seta:hover {
+            transform: scale(1.1);
+        }
+        .seta span {
+            margin-left: 10px;
+            font-size: 22px;
+        }
+        .galeria {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .galeria img {
+            width: 220px;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s;
+        }
+        .galeria img:hover {
+            transform: scale(1.1);
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <audio id="musica" loop>
+        <source src="images/dayvid.mp3" type="audio/mp3">
+        Seu navegador não suporta áudio.
+    </audio>
+
+    <div class="ficha">
+        <p><strong>A GAB É DE TODOS GALERA!!!</strong>
+        <p><strong>Nome:</strong>Gabrielle victoria ferreira nunes</p>
+        <p><strong>Discord:</strong>gabzzxw</p>
+        <p><strong>Cpf:</strong>09311860999</p>
+        <p><strong>Mãe:</strong>LIDIANE BICHOF</p>
+        <p><strong>CPF da Mãe :</strong>05388166945</p>
+        <p><strong>Idade:</strong>14 anos</p>
+        <p><strong>Mais informações: </strong> 
+            <a href="https://doxbin.com/upload/gabzzxw" target="_blank" style="color: #ff008c; text-decoration: none;">
+                https://doxbin.com/upload/gabzzxw
+            </a>
+        </p>
+    </div>
+
+
+    <div class="seta" onclick="mostrarGaleria()">➡️ <span>Galeria (poucas prints)</span></div>
+    <div class="galeria" id="galeria">
+        <span class="close" onclick="fecharGaleria()">✖</span>
+        <img src="images/imagem1.png" alt="Imagem 1">
+        <img src="images/imagem2.png" alt="Imagem 2">
+        <img src="images/imagem4.png" alt="Imagem 1">
+        <img src="images/imagem5.png" alt="Imagem 2">
+        <img src="images/imagem6.png" alt="Imagem 3">
+        <img src="images/imagem7.png" alt="Imagem 1">
+        <img src="images/imagem8.png" alt="Imagem 2">
+        <img src="images/imagem9.png" alt="Imagem 3">
+    
+
+    </div>
+
+    <script>
+        let musica = document.getElementById('musica');
+
+        function mostrarGaleria() {
+            document.getElementById('galeria').style.display = 'flex';
+            
+            
+            if (musica.paused) {
+                musica.play().catch(error => {
+                    console.log("Reprodução automática bloqueada: " + error);
+                });
+            }
+        }
+
+        function fecharGaleria() {
+            document.getElementById('galeria').style.display = 'none';
+            musica.pause();
+            musica.currentTime = 0;
+        }
+    </script>
+</body>
+</html>
