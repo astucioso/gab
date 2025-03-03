@@ -1,31 +1,84 @@
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="ref">
-    <meta property="og:description" content="vokal chefe">
-    <meta property="og:image" content="https://cdn.discordapp.com/avatars/1220165675155456133/a3c1c5dba49541b85b5d9908e5803bb8.png?size=2048">
-    <meta property="og:type" content="website">
-    <title>vokal</title>
-    <style>
-        body {
-            background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        h1 {
-            color: red;
-            font-size: 4rem;
-            text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
-            font-family: Arial, sans-serif;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title class="blinking-title">💵</title>
+  <link rel="icon" href="images/1297952981798617090.webp" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>vokal chefe</h1>
+  <script>
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault(); 
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'I') {
+            event.preventDefault(); 
+        }
+    });
+
+    function audioPlay() {
+        var audio = document.getElementById("audio");
+        audio.volume = 1.0;
+        audio.currentTime = 0;
+        audio.play();
+    }
+  </script>
+  
+  <audio loop="" preload="auto" id="audio">
+    <source src="media/cretina.mp3" type="audio/mpeg">
+  </audio>
+  
+  <input type="checkbox" autocomplete="off" id="overlay-toggle">
+  <div class="overlay fullscreen">
+    <label for="overlay-toggle" onclick="audioPlay(); ">
+      <span class="overlayhover hover" style="font-family: monospace; font-size: 0.6em;">assaltantes</span>
+    </label>
+  </div>
+
+  <div class="profile-container">
+    <div class="card">
+      <div class="avatar">
+        <img id="avatar1" src="images/1.png" alt="Avatar do Discord">
+      </div>
+      <div class="info">
+        <h1 id="nickname1">
+          <span id="nickname-text1">vokal</span>
+        </h1>
+        <p id="subnick1" class="subnick">vokal</p>
+        <span class="badges">
+          <img src="images/discordnitro.svg" alt="Nitro" class="badge" id="nitro-badge1">
+          <img src="images/discordboost4.png" alt="Boost" class="badge" id="boost-badge1">
+        </span>
+      </div>
+      <a href="https://assaltante.com/" target="_blank">
+        <img src="images/1265680565047398431.webp" alt="Discord Icon" class="social-icon">
+      </a>
+    </div>
+    <div class="card">
+      <div class="avatar">
+        <img id="avatar2" src="images/2.png" alt="Avatar do Discord">
+      </div>
+      <div class="info">
+        <h1 id="nickname2">
+          <span id="nickname-text2">orohub</span>
+        </h1>
+        <p id="subnick2" class="subnick">orohub</p>
+        <span class="badges">
+          <img src="images/discordnitro.svg" alt="Nitro" class="badge" id="nitro-badge2">
+          <img src="images/discordboost1.svg" alt="Boost" class="badge" id="boost-badge2">
+        </span>
+      </div>
+      <a href="https://assaltante.com/" target="_blank">
+        <img src="images/1305828899611217980.webp" alt="Discord Icon" class="social-icon">
+      </a>
+
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
 </body>
 </html>
