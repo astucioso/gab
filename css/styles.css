@@ -9,6 +9,7 @@ body {
   overflow: hidden;
   backdrop-filter: blur(1px);
   position: relative;
+  flex-direction: column;
 }
 
 #background-video {
@@ -29,6 +30,7 @@ body {
   width: 100%;
   gap: 20px;
   animation: float 4s ease-in-out infinite;
+  z-index: 1;
 }
 
 @keyframes float {
