@@ -7,7 +7,7 @@ body {
     height: 100vh;
     color: #ffffff;
     overflow: hidden;
-    background: url('../images/video.mp4') no-repeat center center fixed;
+    background: url('../images/image.png') no-repeat center center fixed;
     background-size: cover;
     backdrop-filter: blur(1px);
   }
