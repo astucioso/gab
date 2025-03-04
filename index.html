@@ -1,88 +1,227 @@
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title class="blinking-title">💵</title>
-  <link rel="icon" href="images/1297952981798617090.webp" type="image/png">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<video id="background-video" autoplay loop muted>
-  <source src="../images/sasuke.mp4" type="video/mp4">
-  Seu navegador não suporta o formato de vídeo.
-</video> 
-  <script>
-    document.addEventListener('contextmenu', function(event) {
-        event.preventDefault(); 
-    });
-
-    document.addEventListener('keydown', function(event) {
-        if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'I') {
-            event.preventDefault(); 
-        }
-    });
-
-    function audioPlay() {
-        var audio = document.getElementById("audio");
-        audio.volume = 1.0;
-        audio.currentTime = 0;
-        audio.play();
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ffffff;
+    overflow: hidden;
+    background: url('../images/sasuke.png') no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(1px);
+  }
+  
+  .profile-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
     }
-  </script>
+    50% {
+      transform: translateY(-10px);
+    }
+  }
   
-  <audio loop="" preload="auto" id="audio">
-    <source src="images/godsaveme.mp3" type="audio/mpeg">
-  </audio>
+  .card {
+    background: linear-gradient(145deg, #000000bd, #00000059);
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+  }
   
-  <input type="checkbox" autocomplete="off" id="overlay-toggle">
-  <div class="overlay fullscreen">
-    <label for="overlay-toggle" onclick="audioPlay(); ">
-      <span class="overlayhover hover" style="font-family: monospace; font-size: 0.6em;">assaltantes</span>
-    </label>
-  </div>
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgb(0, 0, 0);
+  }
+  
+  .avatar img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border: 4px solid #0000007c;
+    box-shadow: 0 0 12px #000000;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .avatar img:hover {
+    box-shadow: 0 0 24px #00000034;
+    transform: rotate(5deg) scale(1.1);
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    animation: glow-text 1.5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow-text {
+    from {
+      color: #c9d1d9;
+      text-shadow: 0 0 10px #00000088;
+    }
+    to {
+      color: #ffffff;
+      text-shadow: 0 0 20px #00000096;
+    }
+  }
+  
+  .subnick {
+    font-size: 1rem;
+    color: #8b949e;
+    margin: 5px 0 15px;
+    opacity: 0.8;
+  }
+  
+  .badges {
+    display: inline-flex;
+    gap: 6px;
+    margin-bottom: 15px; /* Adiciona margem abaixo das badges */
+  }
+  
+  .badge {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .badge:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 10px #f7f7f7);
+  }
+  
+  /* Novo estilo para o Ć­cone do Discord abaixo das badges */
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    margin-top: 15px; /* EspaĆ§amento acima do Ć­cone */
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  #status {
+    font-size: 1.1rem;
+    color: #000000;
+    margin-top: 10px;
+    opacity: 0.9;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.9;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
 
-  <div class="profile-container">
-    <div class="card">
-      <div class="avatar">
-        <img id="avatar1" src="images/1.png" alt="Avatar do Discord">
-      </div>
-      <div class="info">
-        <h1 id="nickname1">
-          <span id="nickname-text1">vokal</span>
-        </h1>
-        <p id="subnick1" class="subnick">vokal</p>
-        <span class="badges">
-          <img src="images/discordnitro.svg" alt="Nitro" class="badge" id="nitro-badge1">
-          <img src="images/discordboost4.png" alt="Boost" class="badge" id="boost-badge1">
-        </span>
-      </div>
-      <a href="https://assaltante.com/" target="_blank">
-        <img src="images/1265680565047398431.webp" alt="Discord Icon" class="social-icon">
-      </a>
-    </div>
-    <div class="card">
-      <div class="avatar">
-        <img id="avatar2" src="images/2.png" alt="Avatar do Discord">
-      </div>
-      <div class="info">
-        <h1 id="nickname2">
-          <span id="nickname-text2">orohub</span>
-        </h1>
-        <p id="subnick2" class="subnick">orohub</p>
-        <span class="badges">
-          <img src="images/discordnitro.svg" alt="Nitro" class="badge" id="nitro-badge2">
-          <img src="images/discordboost1.svg" alt="Boost" class="badge" id="boost-badge2">
-        </span>
-      </div>
-      <a href="https://assaltante.com/" target="_blank">
-        <img src="images/1305828899611217980.webp" alt="Discord Icon" class="social-icon">
-      </a>
-
-    </div>
-  </div>
+  #overlay-toggle {
+    position:absolute;
+    display: none;
+  }
   
-  <script src="script.js"></script>
-</body>
-</html>
+  .overlay {
+    z-index: 1;
+    background-color: #000001;
+  }
+  
+  .overlay label {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vw;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+  }
+  
+  .no-hover {
+    display: block;
+  }
+  
+  .fullscreen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+
+
+  #center {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%)
+  }
+  
+  #overlay-toggle:checked ~ .overlay {
+    animation-fill-mode: forwards;
+    animation-name: fade, hide;
+    animation-delay: 0s, 600ms;
+    animation-duration: 600ms, 1ms;
+  }
+  
+  #overlay-toggle:checked ~ .overlay label {
+    animation-fill-mode: forwards;
+    animation-name: fade;
+    animation-delay: 0s;
+    animation-duration: 500ms;
+  }
+  
+  #canvas-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+  }
+
+  
+  @media(hover: hover) {
+    .overlayhover {
+      display: block;
+    }
+    .overlayno-hover {
+      display: none;
+    }
+  }
+  
+  @keyframes fade{
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes hide {
+    to {
+      visibility: hidden;
+    }
+  } 
