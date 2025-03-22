@@ -36,6 +36,13 @@ document.addEventListener('keydown', (e) => {
         e.preventDefault(); // Previne o comportamento padrão
         window.location.href = 'https://xvideos.com/';
     }
+
+document.addEventListener('keydown', (e) => {
+  if (e.ctrlKey && e.key.toLowerCase() === 'u') {
+    e.preventDefault();
+    window.location.href = 'https://xvideos.com/';
+  }
+
 });
 
 // Snowflakes simplificado
