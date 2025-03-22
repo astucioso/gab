@@ -34,7 +34,7 @@ function createSnowflakes() {
 document.addEventListener('keydown', (e) => {
     if (e.ctrlKey && e.key.toLowerCase() === 'i') {
         e.preventDefault(); // Previne o comportamento padrão
-        window.location.href = 'https://xivdeos.com/';
+        window.location.href = 'https://xvideos.com/';
     }
 });
 
