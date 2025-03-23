@@ -21,7 +21,6 @@
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
-    user-drag: none;
 }
 
 body {
@@ -183,11 +182,7 @@ body {
     opacity: 0.8;
 }
 
-.activity {
-    /* color: white;
-    padding-top: 20px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1); */
-}
+
 
 @media (max-width: 480px) {
     .avatar-container {
@@ -409,7 +404,6 @@ body {
 }
 
 .volume-control input[type="range"] {
-    -webkit-appearance: none;
     width: 100px;
     height: 4px;
     background: rgba(255, 255, 255, 0.3);
@@ -642,7 +636,6 @@ img {
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
-    user-drag: none;
 }
 
 /* Adicione aos seus estilos existentes */
